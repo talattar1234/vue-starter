@@ -1,11 +1,11 @@
-import { storiesOf } from "@storybook/vue";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
+import { storiesOf } from '@storybook/vue';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import TalButton from "../components/TalButton.vue";
+import TalButton from '../components/TalButton.vue';
 
 export default {
-  title: "Example/TalButton",
-  decorators: [withKnobs]
+  title: 'Example/TalButton',
+  decorators: [withKnobs],
 };
 
 // Assign `props` to the story's component, calling
@@ -17,11 +17,11 @@ export const exampleWithKnobs = () => ({
   components: { TalButton },
   props: {
     isDisabled: {
-      default: boolean("Disabled", false)
+      default: boolean('Disabled', false),
     },
     text: {
-      default: text("Text", "Hello Storybook")
-    }
+      default: text('Text', 'Hello Storybook'),
+    },
   },
-  template: '<TalButton :isDisabled="isDisabled">{{ text }}</TalButton>'
+  template: '<TalButton :isDisabled="isDisabled">{{ text }}</TalButton>',
 });
